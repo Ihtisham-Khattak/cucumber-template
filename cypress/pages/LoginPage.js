@@ -1,9 +1,10 @@
 class LoginPage {
+  
   elements = {
-    usernameInput: () => cy.get("#user-name"),
-    passwordInput: () => cy.get("#password"),
-    loginBtn: () => cy.get("#login-button"),
-    errorMessage: () => cy.get('h3[data-test="error"]'),
+    usernameInput: () => cy.get('[type="email"]'),
+    passwordInput: () => cy.get('[type="password"]'),
+    loginBtn: () => cy.get('[type="submit"]'),
+    errorMessage: () => cy.get('.Vue-Toastification__toast'),
   };
 
   typeUsername(username) {
@@ -26,3 +27,4 @@ class LoginPage {
 }
 
 export const loginPage = new LoginPage();
+

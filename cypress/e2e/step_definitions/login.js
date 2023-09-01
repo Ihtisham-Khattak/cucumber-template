@@ -5,7 +5,7 @@ import {
 } from "@badeball/cypress-cucumber-preprocessor";
 import {loginPage} from '@pages/LoginPage'
 
-Given("A web browser is at the saucelabs login page", () => {
+Given("A web browser is at the Volangua login page", () => {
   cy.visit("/");
 });
 
@@ -23,7 +23,7 @@ When("A user provides incorrect credentials, and clicks on the login button", (t
   });
 });
 Then("the url will contains the inventory subdirectory", () => {
-  cy.url().should("contains", "/inventory.html");
+  cy.url().should("contains", "/dashboard");
 });
 Then("The error message {string} is displayed", (errorMessage) => {
   loginPage.elements.errorMessage().should("have.text", errorMessage);
